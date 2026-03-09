@@ -65,7 +65,7 @@ export default function NoticeBoard() {
           {notices.map((notice, index) => (
             <div
               key={index}
-              className="bg-background rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-primary"
+              className="bg-background rounded-2xl p-6 shadow-md hover:shadow-xl active:shadow-xl transition-all duration-300 border-l-4 border-primary"
             >
               <div className="flex items-start justify-between mb-3">
                 <div className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">

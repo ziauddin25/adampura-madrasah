@@ -9,58 +9,25 @@ const categories = [
   { key: "campus", label: "ক্যাম্পাস", labelEn: "Campus" },
   { key: "classroom", label: "ক্লাসরুম", labelEn: "Classroom" },
   { key: "events", label: "অনুষ্ঠান", labelEn: "Events" },
-  { key: "programs", label: "প্রোগ্রাম", labelEn: "Programs" },
 ];
 
 const galleryImages = [
-  {
-    id: 1,
-    category: "campus",
-    src: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
-    alt: "Campus Building",
-  },
-  {
-    id: 2,
-    category: "classroom",
-    src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&q=80",
-    alt: "Classroom",
-  },
-  {
-    id: 3,
-    category: "events",
-    src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80",
-    alt: "Event",
-  },
-  {
-    id: 4,
-    category: "programs",
-    src: "https://images.unsplash.com/photo-1548013146-72479768bada?w=600&q=80",
-    alt: "Islamic Program",
-  },
-  {
-    id: 5,
-    category: "campus",
-    src: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80",
-    alt: "Campus View",
-  },
-  {
-    id: 6,
-    category: "classroom",
-    src: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=600&q=80",
-    alt: "Student Classroom",
-  },
-  {
-    id: 7,
-    category: "events",
-    src: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=600&q=80",
-    alt: "Annual Event",
-  },
-  {
-    id: 8,
-    category: "programs",
-    src: "https://images.unsplash.com/photo-1507692049790-de58290a4334?w=600&q=80",
-    alt: "Religious Program",
-  },
+  { id: 1, category: "campus", src: "/img/madGate.png", alt: "Madrasa Gate" },
+  { id: 2, category: "campus", src: "/img/mad1.png", alt: "Madrasa Building" },
+  { id: 3, category: "classroom", src: "/img/classroom.png", alt: "Classroom" },
+  { id: 4, category: "classroom", src: "/img/classroom2.png", alt: "Classroom 2" },
+  { id: 5, category: "events", src: "/img/event1.png", alt: "Event" },
+  { id: 6, category: "events", src: "/img/footballTeam.png", alt: "Football Team" },
+  { id: 7, category: "events", src: "/img/scoutTeam.png", alt: "Scout Team" },
+  { id: 8, category: "events", src: "/img/scouteteam.png", alt: "Scout Team" },
+  { id: 9, category: "events", src: "/img/treePlantion1.png", alt: "Tree Plantation" },
+  { id: 10, category: "events", src: "/img/new-book.png", alt: "New Books" },
+  { id: 11, category: "events", src: "/img/newbook-1.jpg", alt: "Books" },
+  { id: 12, category: "events", src: "/img/newbook-2.png", alt: "Study" },
+  { id: 13, category: "events", src: "/img/peti.png", alt: "Peti" },
+  { id: 14, category: "events", src: "/img/peti1.png", alt: "Peti 1" },
+  { id: 15, category: "events", src: "/img/student.png", alt: "Student" },
+  { id: 16, category: "campus", src: "/img/hero.png", alt: "Hero" },
 ];
 
 export default function Gallery() {
@@ -90,7 +57,7 @@ export default function Gallery() {
               className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 activeCategory === category.key
                   ? "bg-primary text-white shadow-lg"
-                  : "bg-white text-text-secondary hover:bg-primary/10 hover:text-primary"
+                  : "bg-white text-text-secondary hover:bg-primary/10 hover:text-primary active:bg-primary/10 active:text-primary"
               }`}
             >
               {language === "bn" ? category.label : category.labelEn}
@@ -109,7 +76,7 @@ export default function Gallery() {
                 src={image.src}
                 alt={image.alt}
                 fill
-                className="object-cover transition-transform duration-300 group-hover:scale-110"
+                className="object-cover transition-transform duration-300 group-hover:scale-110 group-active:scale-110"
               />
               <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/40 transition-all duration-300 flex items-center justify-center">
                 <svg

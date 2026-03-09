@@ -63,7 +63,7 @@ export default function Academic() {
           {programs.map((program) => (
             <div
               key={program.key}
-              className="group bg-background rounded-2xl p-6 text-center shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-b-4 border-transparent hover:border-primary"
+              className="group bg-background rounded-2xl p-6 text-center shadow-md hover:shadow-xl active:shadow-xl transition-all duration-300 hover:-translate-y-2 active:-translate-y-2 border-b-4 border-transparent hover:border-primary active:border-primary"
             >
               <div className="w-20 h-20 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:text-white transition-all duration-300">
                 {program.icon}

@@ -1,7 +1,15 @@
 @import "tailwindcss";
 
-@theme inline {
-  --font-bengali: var(--font-bengali);
+@font-face {
+  font-family: 'Mehdi Ekushey';
+  src: url('/fonts/MehdiEkushey/Unicode/Li Mehdi Ekushey Unicode.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-bengali: 'Mehdi Ekushey', 'Noto Sans Bengali', sans-serif;
   
   --color-primary: #041A23;
   --color-primary-dark: #031a24;
@@ -28,13 +36,13 @@
   }
   
   body {
-    background-color: var(--color-background);
-    color: var(--color-text-primary);
-    font-family: var(--font-bengali), 'Noto Sans Bengali', sans-serif;
+    background-color: #F8FAFC;
+    color: #1E293B;
+    font-family: 'Mehdi Ekushey', 'Noto Sans Bengali', sans-serif;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-bengali), 'Noto Sans Bengali', sans-serif;
+    font-family: 'Mehdi Ekushey', 'Noto Sans Bengali', sans-serif;
     font-weight: 700;
   }
 }

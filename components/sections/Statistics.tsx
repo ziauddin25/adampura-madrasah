@@ -5,9 +5,9 @@ import { useLanguage } from "@/components/context/LanguageContext";
 
 const stats = [
   { key: "totalStudents", value: 1500, suffix: "+" },
-  { key: "totalTeachers", value: 45, suffix: "+" },
-  { key: "established", value: 1995, suffix: "" },
-  { key: "departments", value: 8, suffix: "" },
+  { key: "totalTeachers", value: 35, suffix: "+" },
+  { key: "established", value: 1958, suffix: "" },
+  { key: "departments", value: 8, suffix: "+" },
 ];
 
 function useCountUp(end: number, duration: number = 2000, shouldStart: boolean) {

@@ -5,64 +5,44 @@ import { useLanguage } from "@/components/context/LanguageContext";
 
 const results = [
   {
-    name: "আব্দুল্লাহ আল মাহমুদ",
-    nameEn: "Abdullah Al Mahmud",
-    roll: "১২৩৪",
-    grade: "A+",
-    marks: "৯৮৫",
-    year: "২০২৫",
-    exam: "কামিল",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80",
-  },
-  {
-    name: "ফাতেমা খানম",
-    nameEn: "Fatema Khanam",
-    roll: "১২৩৫",
+    name: "আব্দুর রহমান",
+    nameEn: "Abdul Rahman",
+    roll: "৮৯",
     grade: "A+",
     marks: "৯৮০",
     year: "২০২৫",
-    exam: "ফাজিল",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80",
+    exam: "PSC",
+    image: "/img/psc.png",
   },
   {
     name: "মোহাম্মদ রাহিম",
     nameEn: "Mohammad Rahim",
     roll: "৫৬৭",
     grade: "A+",
-    marks: "৬৫০",
+    marks: "৯৭৫",
     year: "২০২৫",
     exam: "আলিম",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80",
+    image: "/img/alim.png",
   },
   {
-    name: "আয়েশা সুলতানা",
-    nameEn: "Ayesha Sultana",
-    roll: "৪৫২",
+    name: "ফাতেমা খানম",
+    nameEn: "Fatema Khanam",
+    roll: "১২৩৫",
     grade: "A+",
-    marks: "৬৪৫",
+    marks: "৯৬৫",
     year: "২০২৫",
-    exam: "দাখিল",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80",
+    exam: "ফাজিল",
+    image: "/img/fazil.png",
   },
   {
-    name: "আব্দুর রহমান",
-    nameEn: "Abdul Rahman",
-    roll: "৮৯",
+    name: "আব্দুল্লাহ আল মাহমুদ",
+    nameEn: "Abdullah Al Mahmud",
+    roll: "১২৩৪",
     grade: "A+",
-    marks: "৫৯৫",
-    year: "২০২৫",
-    exam: "PSC",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80",
-  },
-  {
-    name: "জাহানারা বেগম",
-    nameEn: "Jahanara Begum",
-    roll: "১২৩৬",
-    grade: "A",
-    marks: "৯৭০",
+    marks: "৯৫০",
     year: "২০২৫",
     exam: "কামিল",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&q=80",
+    image: "/img/kamil.png",
   },
 ];
 
@@ -86,7 +66,7 @@ export default function Results() {
           {results.map((result, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 flex items-center space-x-4"
+              className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl active:shadow-xl transition-all duration-300 flex items-center space-x-4"
             >
               <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 relative">
                 <Image

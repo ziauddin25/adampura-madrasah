@@ -54,7 +54,7 @@ export default function Features() {
           {features.map((feature) => (
             <div
               key={feature.key}
-              className="group bg-background p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="group bg-background p-8 rounded-2xl shadow-md hover:shadow-xl active:shadow-xl transition-all duration-300 hover:-translate-y-1 active:-translate-y-1"
             >
               <div className="w-16 h-16 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-white transition-all duration-300">
                 {feature.icon}

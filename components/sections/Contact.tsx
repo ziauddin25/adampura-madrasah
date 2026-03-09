@@ -46,7 +46,7 @@ export default function Contact() {
                     <p className="font-semibold text-text-primary">{t("address")}</p>
                     <p className="text-text-secondary">
                       {language === "bn" 
-                        ? "দশমিনা, পটুয়াখালী, বরিশাল, বাংলাদেশ"
+                        ? "দক্ষিণ আদমপুর, দশমিনা, পটুয়াখালী।"
                         : "Dashmina, Patuakhali, Barishal, Bangladesh"}
                     </p>
                   </div>
@@ -60,7 +60,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-semibold text-text-primary">{t("phone")}</p>
-                    <p className="text-text-secondary">01716452799</p>
+                    <p className="text-text-secondary">01790746520</p>
                   </div>
                 </div>
 
@@ -73,7 +73,7 @@ export default function Contact() {
                   <div>
                     <p className="font-semibold text-text-primary">{t("principal")}</p>
                     <p className="text-text-secondary">
-                      {language === "bn" ? "মুহা. নেসার উদ্দিন" : "Moha. Nesar Uddin"}
+                      {language === "bn" ? "মুহা. নেছার উদ্দিন" : "Moha. Nesar Uddin"}
                     </p>
                   </div>
                 </div>

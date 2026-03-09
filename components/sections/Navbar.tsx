@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/components/context/LanguageContext";
+import { Menu, X } from "lucide-react";
 
 const IslamicLogo = ({ className = "" }: { className?: string }) => (
   <svg viewBox="0 0 100 100" className={className} fill="currentColor">
@@ -43,6 +44,7 @@ export default function Navbar() {
       const now = new Date();
       const hours = now.getHours();
       const minutes = now.getMinutes();
+      const seconds = now.getSeconds();
       const ampm = hours >= 12 ? 'PM' : 'AM';
       const hour12 = hours % 12 || 12;
       const day = now.getDate();
@@ -52,9 +54,9 @@ export default function Navbar() {
       if (language === "bn") {
         const bnDigits = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
         const toBn = (num: number) => num.toString().split('').map(d => bnDigits[parseInt(d)]).join('');
-        setCurrentTime(`${toBn(hour12)}:${toBn(minutes).padStart(2, '0')} ${ampm === 'PM' ? 'পূর্বাহ্ন' : 'পূর্বাহ্ন'} | ${toBn(day)}/${toBn(month)}/${toBn(year)}`);
+        setCurrentTime(`${toBn(hour12)}:${toBn(minutes).padStart(2, '0')}:${toBn(seconds).padStart(2, '0')} ${ampm} | ${toBn(day)}/${toBn(month)}/${toBn(year)}`);
       } else {
-        setCurrentTime(`${hour12}:${minutes.toString().padStart(2, '0')} ${ampm} | ${day}/${month}/${year}`);
+        setCurrentTime(`${hour12}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')} ${ampm} | ${day}/${month}/${year}`);
       }
     };
 
@@ -135,38 +137,25 @@ export default function Navbar() {
           </div>
 
           <button
-            className="md:hidden p-2 rounded-lg text-text-primary hover:bg-gray-100"
+            className={`md:hidden  transition-all duration-200 ${
+              isMobileMenuOpen 
+                ? "text-white" 
+                : "text-white hover:bg-white/20"
+            }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              {isMobileMenuOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
+            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-100 py-4 shadow-lg">
-            <div className="flex flex-col space-y-2">
+          <>
+            <div 
+              className="fixed inset-0 bg-black/50 z-40 md:hidden"
+              onClick={() => setIsMobileMenuOpen(false)}
+            />
+            <div className="md:hidden bg-white border-t border-gray-100 py-4 shadow-lg relative z-50">
+            <div className="flex flex-col space-y-2 pt-6">
               {navItems.map((item) => (
                 <a
                   key={item.key}
@@ -182,7 +171,7 @@ export default function Navbar() {
                   onClick={() =>
                     setLanguage(language === "bn" ? "en" : "bn")
                   }
-                  className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-text-primary bg-gray-100 rounded-lg"
+                  className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-white bg-primary rounded-lg"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -207,7 +196,8 @@ export default function Navbar() {
                 </a>
               </div>
             </div>
-          </div>
+            </div>
+          </>
         )}
       </div>
     </nav>

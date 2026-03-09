@@ -20,14 +20,14 @@ export default function About() {
           <div className="relative">
             <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&q=80"
+                src="/img/hero.png"
                 alt="Madrasa Building"
                 fill
                 className="object-cover"
               />
             </div>
             <div className="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-xl shadow-lg hidden sm:block">
-              <p className="text-3xl font-bold">1995</p>
+              <p className="text-3xl font-bold">1958</p>
               <p className="text-sm">{t("established")}</p>
             </div>
           </div>
