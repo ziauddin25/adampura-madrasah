@@ -14,6 +14,7 @@ const results = [
     exam: "PSC",
     image: "/img/psc.png",
   },
+  
   {
     name: "মোহাম্মদ রাহিম",
     nameEn: "Mohammad Rahim",
@@ -34,8 +35,9 @@ const results = [
     exam: "ফাজিল",
     image: "/img/fazil.png",
   },
+
   {
-    name: "আব্দুল্লাহ আল মাহমুদ",
+    name: "আব্দুল্লাহ আল মাহমুদ ",
     nameEn: "Abdullah Al Mahmud",
     roll: "১২৩৪",
     grade: "A+",
