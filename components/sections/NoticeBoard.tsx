@@ -22,10 +22,10 @@ const notices = [
   {
     title: "ঈদ-উল-ফিতরের ছুটি",
     titleEn: "Eid-ul-Fitr Holiday",
-    date: "২০ ফেব্রুয়ারি ২০২৬",
-    dateEn: "20 February 2026",
-    description: "ঈদ-উল-ফিতর উপলক্ষে আগামী ২০ থেকে ২৫ ফেব্রুয়ারি পর্যন্ত মাদ্রাসা বন্ধ থাকবে।",
-    descriptionEn: "Madrasa will remain closed from 20 to 25 February on the occasion of Eid-ul-Fitr.",
+    date: "১৮ ফেব্রুয়ারি ২০২৬ থেকে ২৫ মার্চ ২০২৬",
+    dateEn: "18 February 2026 to 25 March 2026",
+    description: "পবিত্র রমজান মাস ও ঈদ-উল-ফিতর উপলক্ষে মাদ্রাসা ১৮ ফেব্রুয়ারি থেকে ২৫ মার্চ ২০২৬ পর্যন্ত বন্ধ থাকবে।",
+    descriptionEn: "On the occasion of the holy month of Ramadan and Eid-ul-Fitr, the madrasa will remain closed from 18 February to 25 March 2026.",
   },
   {
     title: "বার্ষিক ক্রীড়া প্রতিযোগিতা",
@@ -38,8 +38,8 @@ const notices = [
   {
     title: "শিক্ষক প্রশিক্ষণ কর্মশালা",
     titleEn: "Teacher Training Workshop",
-    date: "১০ ফেব্রুয়ারি ২০২৬",
-    dateEn: "10 February 2026",
+    date: "১০ মে ২০২৬",
+    dateEn: "10 May 2026",
     description: "সকল শিক্ষকদের জন্য একটি প্রশিক্ষণ কর্মশালার আয়োজন করা হবে। উপস্থিতি বাধ্যতামূলক।",
     descriptionEn: "A training workshop will be organized for all teachers. Attendance is mandatory.",
   },
